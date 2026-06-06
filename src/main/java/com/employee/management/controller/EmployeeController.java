@@ -38,6 +38,7 @@ public class EmployeeController {
 		List <Employee> response=service.getAllEmployee();
 		return new ResponseEntity<List<Employee>>(response,HttpStatus.OK);
 	}
+	
 	@GetMapping("/getById/{id}")
 	public ResponseEntity<Employee> getEmployeeById(@PathVariable ("id") Long id){
 		Employee response=service.getEmployeeById(id);
